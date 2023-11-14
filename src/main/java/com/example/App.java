@@ -19,7 +19,7 @@ public class App
         try {
             //inizio
 
-            Socket socket = new Socket("localhost", 3000);
+            Socket socket = new Socket("10.22.9.15", 3000);
             DataOutputStream outServer = new DataOutputStream(socket.getOutputStream());
             BufferedReader inServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             Scanner in = new Scanner(System.in);
@@ -29,15 +29,20 @@ public class App
             
             System.out.println("---- inserisci il nome con cui verrai riconosciuto ----");
             outServer.writeBytes(in.nextLine());
-            
+            System.out.println("mandato il nome");
+
             a.start();
 
             do{
                 //prendiamo la stringa
+                System.out.print("<==\t");
                 messaggio = in.nextLine();
 
                 //manda
-                if(!messaggio.equals("/close")){ outServer.writeBytes(messaggio + "\n");}
+                if(!messaggio.equals("/close")){ 
+                    outServer.writeBytes(messaggio + "\n");
+                    
+                }
                 
                 // chiusura /close
                 else { System.out.println("--- chiusa la connessione ---");}
