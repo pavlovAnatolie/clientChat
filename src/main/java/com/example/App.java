@@ -19,7 +19,7 @@ public class App
         try {
             //inizio
 
-            Socket socket = new Socket("10.22.9.15", 3000);
+            Socket socket = new Socket("10.22.9.13", 3000);
             DataOutputStream outServer = new DataOutputStream(socket.getOutputStream());
             BufferedReader inServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             Scanner in = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class App
             String messaggio = "";
             
             System.out.println("---- inserisci il nome con cui verrai riconosciuto ----");
-            outServer.writeBytes(in.nextLine());
+            outServer.writeBytes(in.nextLine()+ "\n");
             System.out.println("mandato il nome");
 
             a.start();
