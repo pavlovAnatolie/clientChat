@@ -38,17 +38,18 @@ public class App
                 System.out.print("<==\t");
                 messaggio = in.nextLine();
 
-                //manda
-                if(!messaggio.equals("/close")){ 
-                    outServer.writeBytes(messaggio + "\n");
-                    
+                // chiusura /close
+                if(messaggio.equals("/close")){ 
+                    System.out.println("--- chiusa la connessione ---");
+                    socket.close();
+                    //break
                 }
                 
-                // chiusura /close
-                else { System.out.println("--- chiusa la connessione ---");}
+                //manda
+                
+                outServer.writeBytes(messaggio + "\n");
 
-
-            }while(!messaggio.equals("/close"));
+            }while(socket.isClosed());
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
