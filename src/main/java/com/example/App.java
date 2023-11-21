@@ -41,7 +41,7 @@ public class App
                 // chiusura /close
                 if(messaggio.equals("/close")){ 
                     System.out.println("--- chiusa la connessione ---");
-                    
+                    a.terminate();
                 }
                 
                 //manda

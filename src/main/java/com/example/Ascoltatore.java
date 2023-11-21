@@ -4,15 +4,20 @@ import java.io.BufferedReader;
 
 public class Ascoltatore extends Thread{
     
-    BufferedReader inServer;
+    private BufferedReader inServer;
+    private boolean exit = false;
 
     public Ascoltatore(BufferedReader inServer){
         this.inServer = inServer; 
     }
     
+    public void terminate(){
+        exit  = true;
+    }
+
     @Override
     public void run() {
-        while(true){
+        while(!exit){
             String risposta = "";
             try {
                 //ascoltare
