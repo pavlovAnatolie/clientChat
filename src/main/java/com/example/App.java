@@ -28,7 +28,7 @@ public class App
             String messaggio = "";
             
             System.out.println("---- inserisci il nome con cui verrai riconosciuto ----");
-            outServer.writeBytes(in.nextLine()+ "\n");
+            outServer.writeBytes(in.nextLine()+"\n");
             System.out.println("mandato il nome");
 
             a.start();
@@ -41,18 +41,18 @@ public class App
                 // chiusura /close
                 if(messaggio.equals("/close")){ 
                     System.out.println("--- chiusa la connessione ---");
-                    socket.close();
-                    //break
+                    
                 }
                 
                 //manda
-                
                 outServer.writeBytes(messaggio + "\n");
 
-            }while(socket.isClosed());
 
+            }while(!messaggio.equals("/close"));
+            System.out.println("chiusio");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println();
         }
     }
 }
+

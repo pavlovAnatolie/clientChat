@@ -20,6 +20,7 @@ public class Ascoltatore extends Thread{
 
                 //stampare cosa sente
                 System.out.println(risposta);
+                
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
