@@ -9,7 +9,7 @@
 
 ---
 
-/##Protocol
+h2 Protocol
 
 **Access**
 - At the access the user have to write his username to be recognized by other users.
