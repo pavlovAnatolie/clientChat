@@ -31,6 +31,7 @@ A private message is recognized by blue colour font.
 - To quit the chat users have to write a command: "/close".
 
 This action will disconnect the user and will communicate to others a red message of disconnected.
+
 ---
 
 **group members:**
