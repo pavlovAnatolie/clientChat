@@ -34,7 +34,7 @@ This action will disconnect the user and will communicate to others a red messag
 
 ---
 
-**group members:**
+**group's members:**
 
  - Pavlov Anatolie
  - Taiti Samuele
