@@ -6,10 +6,6 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -17,8 +13,9 @@ public class App
         
 
         try {
-            //inizio
+            //start
 
+            //creating a socket nad streams of personal device
             Socket socket = new Socket("10.22.9.13", 3000);
             DataOutputStream outServer = new DataOutputStream(socket.getOutputStream());
             BufferedReader inServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -26,25 +23,26 @@ public class App
             Ascoltatore a = new Ascoltatore(inServer);
 
             String messaggio = "";
-            
+            //inserting the username
             System.out.println("---- inserisci il nome con cui verrai riconosciuto ----");
             outServer.writeBytes(in.nextLine()+"\n");
             System.out.println("mandato il nome");
-
+            //creathg a thread
             a.start();
 
             do{
-                //prendiamo la stringa
+                //getting a string
                 System.out.print("<==\t");
                 messaggio = in.nextLine();
 
-                // chiusura /close
+                // closing the chat for the user
                 if(messaggio.equals("/close")){ 
                     System.out.println("--- chiusa la connessione ---");
+                    //invoking termiate method that end the cycle inisde the thread
                     a.terminate();
                 }
                 
-                //manda
+                //sending
                 outServer.writeBytes(messaggio + "\n");
 
 
