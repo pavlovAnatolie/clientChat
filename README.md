@@ -8,7 +8,8 @@
 **This is a code for a client that can partecipate to a chat**
 
 ---
-##protocol
+
+/##Protocol
 
 **Access**
 - At the access the user have to write his username to be recognized by other users.
@@ -36,5 +37,5 @@ This action will disconnect the user and will communicate to others a red messag
 
  - Pavlov Anatolie
  - Taiti Samuele
- - Yasser Soleiman
+ - Soliman Ammaar
 
