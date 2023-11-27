@@ -1,10 +1,4 @@
 # Client Chat
-
-**group members:**
-
- - Pavlov Anatolie
- - Taiti Samuele
- - Yasser Soleiman
  ---
  ****Technologies:****
  - Visual Studio Code - development environment .
@@ -14,7 +8,7 @@
 **This is a code for a client that can partecipate to a chat**
 
 ---
-##protocol##
+##protocol
 
 **Access**
 - At the access the user have to write his username to be recognized by other users.
@@ -36,5 +30,11 @@ A private message is recognized by blue colour font.
 - To quit the chat users have to write a command: "/close".
 
 This action will disconnect the user and will communicate to others a red message of disconnected.
+---
 
+**group members:**
+
+ - Pavlov Anatolie
+ - Taiti Samuele
+ - Yasser Soleiman
 
