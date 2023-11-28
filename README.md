@@ -27,6 +27,8 @@ A broadcast message is recognized by white colour.
 
 A private message is recognized by blue colour font.
 
+if someone doest exist an ERROR message will be communicated to the sender.
+
 **Quitting the chat**
 - To quit the chat users have to write a command: "/close".
 
